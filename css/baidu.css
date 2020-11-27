@@ -1,0 +1,379 @@
+.container {
+  width: 100%;
+  height: 100%;
+  overflow-y: hidden;
+  min-width: 1400px;
+}
+header {
+  width: 100%;
+  height: 60px;
+  position:relative;
+  z-index:999;
+  /* background-color: aquamarine; */
+}
+main {
+  width: 100%;
+  height: calc(100% - 100px);
+  /* background-color: bisque; */
+}
+main .layout {
+  height: 314px;
+}
+footer {
+  width: 100%;
+  height: 40px;
+  background-color: #fbfbfb;
+  position:relative;
+  z-index:9999;
+}
+/* head部分样式 */
+.topBox {
+  display: flex;
+  flex-direction: row; /*从左往右布局 */
+  font: 13px/23px Arial, sans-serif;
+  color: #222;
+}
+
+.topBox_left {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.topBox_right {
+  display: flex;
+  flex-direction: row;
+}
+
+.topBox_content {
+  padding: 15px 10px;
+  margin: 5px;
+}
+
+.login_btn {
+  position: relative;
+  background-color: #4e71f2;
+  color: #fff;
+  font-weight: bolder;
+  border-radius: 6px;
+  font-size: 12px;
+  width: 50px;
+  height: 25px;
+  display: inline-block;
+  /* 字体居中，利用行高等于元素高 */
+  text-align: center;
+  line-height: 25px;
+}
+
+.topBox_content:hover {
+  cursor: pointer;
+  color: #315efb;
+}
+.dropdown_more {
+  cursor: pointer;
+}
+.dropdown_more:hover .dropdown_more_card {
+  display: block;
+}
+.dropdown_more_card {
+  display: none;
+  position: absolute;
+  width: 300px;
+  height: 220px;
+  background-color: #fff;
+  left: 110px;
+  top: 50px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.15);
+}
+.dropdown_setting:hover .dropdown_setting_card {
+  display: block;
+}
+.dropdown_setting_card {
+  display: none;
+  position: absolute;
+  width: 85px;
+  background-color: #fff;
+  right: 75px;
+  top: 50px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.15);
+  padding: 5px 0;
+}
+.dropdown_setting_card > ul > li {
+  color: #222;
+  padding: 3px 0;
+  text-align: center;
+  line-height: 25px;
+}
+.dropdown_setting_card > ul > li:hover {
+  color: #315efb;
+}
+
+/* main部分样式 */
+.main_flex {
+  display: flex;
+  flex-direction: column;
+  /*从上向下布局 */
+}
+
+.logo_img {
+  margin: 10px auto;
+  /* 居中对齐 */
+}
+
+.baidu_search {
+  display: flex;
+  position: relative;
+}
+
+.baidu_input {
+  outline: none;
+  border: 2px solid #a7aab5;
+  height: 45px;
+  width: 580px;
+  box-sizing: border-box;
+  text-indent: 6px;
+  font-size: 16px;
+  border-radius: 10px 0 0 10px;
+  border-right: none;
+}
+
+/* 输入框聚焦 */
+.baidu_input:focus {
+  color: #000;
+  background-color: #fff;
+  border-color: #4e6ef2 !important;
+}
+
+.baidu_button {
+  height: 45px;
+  width: 100px;
+  border: none;
+  color: white;
+  background-color: #4e6ef2;
+  left: 550px;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.soutu-btn {
+  position: absolute;
+  top: 15px;
+  right: 120px;
+  color: #adb0ba;
+}
+
+.baiduSearch {
+  font-size: medium;
+}
+
+.hot_content {
+  display: flex;
+  flex-direction: row;
+  padding: 40px 0;
+  font-size: 14px;
+}
+
+.left_hot_content {
+  display: flex;
+  flex-direction: column;
+  width: 330px;
+  /* 应长340px */
+}
+
+.left_hot_span {
+  margin: 5px 0;
+}
+
+.top1 {
+  color: #fe2d46;
+  margin-right: 5px;
+}
+
+.top2 {
+  color: #f60;
+  margin-right: 5px;
+}
+
+.top3 {
+  color: #faa90e;
+  margin-right: 5px;
+}
+
+.text-new {
+  width: 10px;
+  height: 10px;
+  padding: 0 2px;
+  background-color: #ff455b;
+  color: #ffffff;
+  font-size: 12px;
+  border-radius: 4px;
+}
+.text-hot {
+  width: 10px;
+  height: 10px;
+  padding: 0 2px;
+  background-color: #ff9812;
+  color: #ffffff;
+  font-size: 12px;
+  border-radius: 4px;
+}
+
+.right_hot_content {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  /* 应长340px */
+}
+
+.normal {
+  color: #9195a3;
+  margin-right: 5px;
+}
+
+.change {
+  color: #9195a3;
+  text-align: right;
+  font-size: 13px;
+  padding: 1px 0;
+}
+.change:hover {
+  cursor: pointer;
+  color: #4e6ef2;
+}
+
+.left_hot_span > a:hover {
+  cursor: pointer;
+  color: #4e6ef2;
+}
+
+.right_hot_span > a:hover {
+  cursor: pointer;
+  color: #4e6ef2;
+}
+
+.dropdown_camera {
+  cursor: pointer;
+}
+
+.dropdown_camera:hover .dropdown_camera_card {
+  display: block;
+}
+
+.dropdown_camera:hover > i {
+  color: #4e6ef2 !important;
+}
+
+.dropdown_camera_card {
+  display: none;
+  position: absolute;
+  width: 90px;
+  height: 35px;
+  background-color: #fff;
+  /* 相对定位 */
+  left: -53px;
+  top: 35px;
+  border-radius: 6px;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.15);
+  /* 字体居中 */
+  text-align: center;
+  line-height: 35px;
+  font-weight: bold;
+  color: #626675;
+}
+/* footer部分样式 */
+.footer_flex {
+  display: flex;
+  font-size: 12px;
+  font-weight: bold;
+  font-family: "PingFang SC", Arial, "Microsoft YaHei", sans-serif;
+}
+
+.footor_text_left_box {
+  color: #9195a3;
+  padding: 15px;
+}
+
+.footor_text_left_box:hover {
+  cursor: pointer;
+  color: black;
+}
+
+.footor_text_right_box {
+  cursor: text;
+  color: #bbbbbb;
+  padding: 15px;
+}
+
+.side_button {
+  position: fixed;
+  right: 24px;
+  bottom: 64px;
+  background-color: #fbfbfb;
+  width: 44px;
+  border-radius: 22px;
+}
+
+.qrcode-layer {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+.side_button .icon-mask-wrapper {
+  width: 100%;
+  border-radius: 50%;
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.icon {
+  height: 24px;
+  width: 24px;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+}
+
+.icon_hover {
+  height: 24px;
+  width: 24px;
+  margin-right: auto;
+  margin-left: auto;
+  display: none;
+}
+
+.qrcode-layer:hover .icon {
+  display: none;
+}
+
+.qrcode-layer:hover .icon_hover {
+  display: block;
+}
+
+.qrcode-layer:hover {
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+.dropdown_side {
+  cursor: pointer;
+}
+
+.dropdown_side:hover .dropdown_side_card {
+  display: block;
+}
+
+.dropdown_side_card {
+  display: none;
+  position: fixed;
+  right: 80px;
+  bottom: 64px;
+  background-color: #fff;
+  border-radius: 12px;
+  width: 289px;
+  height: 107px;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.15);
+}
